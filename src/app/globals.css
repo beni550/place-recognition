@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 245, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* כפתורים */
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition duration-200;
+}
+
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition duration-200;
+}
+
+/* כרטיסים */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+/* טפסים */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-label {
+  @apply block text-gray-700 text-sm font-medium mb-1;
+}
+
+/* תגיות */
+.badge {
+  @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+}
+
+.badge-blue {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-yellow {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-red {
+  @apply bg-red-100 text-red-800;
+}
+
+/* אנימציות */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
